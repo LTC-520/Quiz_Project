@@ -50,7 +50,7 @@ h3{
     padding: 2rem;
 }
 
-.container > *{
+.container > * {
     width: 100%;
 }
 
@@ -59,7 +59,7 @@ h3{
     flex-direction: column;
 }
 
-.flex-center{
+.flex-center {
     justify-content: center;
     align-items: center;
 }
@@ -88,7 +88,7 @@ h3{
     border-radius: 15px;
 }
 
-.btn:hover{
+.btn:hover {
     cursor: pointer;
     box-shadow: 0.0.4rem 1.4rem 0 rgba(8, 114, 244, 0.6);
     transform: scale(1.03);
@@ -96,7 +96,7 @@ h3{
 
 }
 
-.btn[disabled]:hover{
+.btn[disabled]:hover {
     cursor: not-allowed;
     box-shadow: none;
     transform: none;

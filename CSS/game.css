@@ -20,11 +20,10 @@
 
 .choice-container:hover {
     cursor: pointer;
-    box-shadow: 0.0.4rem 1.4rem 0 rgba(8, 114, 244, 0.6);
-    transform: scale(1.03);
-    transition: all 150ms;
-
-}
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+  }
 
 .correct {
     background: green;
