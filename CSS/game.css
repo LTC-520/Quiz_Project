@@ -26,11 +26,11 @@
   }
 
 .correct {
-    background: green;
+    background-color: green;
 }
 
 .incorrect {
-    background: red;
+    background-color: red;
 }
 
 /*Heads up display*/
