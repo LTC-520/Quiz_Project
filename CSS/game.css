@@ -33,11 +33,11 @@
     background-color: red;
 }
 
-/*Heads up display*/
+/*HUD*/
 
 #hud {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
 }
 
