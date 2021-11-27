@@ -21,25 +21,44 @@ let questions = [
   {
     question:
       "In which US city is Broadway located?",
-    choice1: "San Francisco'>",
+    choice1: "San Francisco",
     choice2: "Los Angeles",
     choice3: "New York City",
     choice4: "Chicago",
     answer: 3
   },
   {
-    question: "Which of the Seven Wonders is located in Egypt?",
-    choice1: "Tigris River",
-    choice2: "Kissama National Park",
-    choice3: "Library of Alexandria",
-    choice4: "The Pyramids of Giza",
-    answer: 4
+    question: "Who was the messenger of the gods?",
+    choice1: "Hercules",
+    choice2: "Hermes",
+    choice3: "Aries",
+    choice4: "Athena",
+    answer: 2
   }
+  ,
+  {
+    question: "Which organ is responsible for regulating metabolism?",
+    choice1: "Lungs",
+    choice2: "Heart",
+    choice3: "Liver",
+    choice4: "Appendix",
+    answer: 1
+  }
+  ,
+  {
+    question: "Pancakes are a food item of what type of cuisine?",
+    choice1: "Belgium",
+    choice2: "American",
+    choice3: "French",
+    choice4: "South American",
+    answer: 2
+  }
+  
 ];
 
 //CONSTANTS
 const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 3;
+const MAX_QUESTIONS = 5;
 
 startGame = () => {
   questionCounter = 0;
