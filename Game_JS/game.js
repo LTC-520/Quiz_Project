@@ -1,11 +1,13 @@
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
-console.log(choices);
+const progressText = document.getElementById("progressText");
+const scoreText = document.getElementById("score");
+const progressBarFull = document.getElementById("progressBarFull");
 
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
-let questionCounter = 0;
+let progressText = 0;
 let availableQuestions = [];
 
 let questions = [
@@ -27,7 +29,7 @@ let questions = [
         answer: 3,
     },
     {
-        question: " How do you write 'Hello World' in an alert box?",
+        question: "How do you write 'Hello World' in an alert box?",
         choice1: "msgBox('Hello World');",
         choice2: "alertBox('Hello World');",
         choice3: "msg('Hello World');",
@@ -53,6 +55,8 @@ getNewQuestion = () => {
         return window.location.assign('/end.html');
     }
     questionCounter++;
+    progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
+
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
@@ -73,14 +77,11 @@ choices.forEach((choice) => {
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
-
-        /*const classToApply = 'incorrect';
-        if(selectedAnswer == currentQuestion.answer){
-            classToApply = 'correct';
-        }*/
-
         const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
-        console.log(classToApply);
+        
+        if (classToApply === "correct") {
+            incrementScore(CORRECT_BONUS);
+          }
 
         selectedChoice.parentElement.classList.add(classToApply);
 
@@ -90,5 +91,10 @@ choices.forEach((choice) => {
         }, 1000);
     });
 });
+
+incrementScore = num => {
+    score += num;
+    scoreText.innerText = score;
+  };
 
 startGame();
