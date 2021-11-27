@@ -38,7 +38,7 @@ h3{
     font-size: 2.8rem;
     font-weight: 700;
 }
-/*Utilities*/
+
 .container {
     width: 100vw;
     height: 100vh;
@@ -85,7 +85,7 @@ h3{
     text-decoration: none;
     color: rgb(4, 54, 4);
     background: linear-gradient(90deg, rgb(198, 219, 11) 0%, rgb(182, 209, 27) 100%);
-    border-radius: 15px;
+    border-radius: 1.5rem;
 }
 
 .btn:hover {
@@ -101,3 +101,25 @@ h3{
     box-shadow: none;
     transform: none;
 }
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input {
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    border-radius: 1.5rem;
+    
+    box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+    
+  }
+  
+  input::placeholder {
+    color: #aaa;
+  }
